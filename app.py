@@ -1,17 +1,21 @@
 import streamlit as st
 import openai
 
+# Load OpenAI API key from Streamlit Cloud secrets
 openai.api_key = st.secrets["openai_api_key"]
 
 st.title("DMARC Consultant Bot")
 
+# Select technical level
 user_level = st.selectbox(
     "Choose your technical level:",
     ["Executive", "Mid-level IT", "Email Security Pro"]
 )
 
+# Input field for user's question
 user_question = st.text_area("Ask your DMARC question:")
 
+# Process when button is clicked
 if st.button("Get Advice"):
     if user_question:
         system_prompt = f"""
