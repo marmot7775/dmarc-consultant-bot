@@ -10,9 +10,6 @@ try:
 except ImportError:
     dns = None  # DNS lookups will be disabled if dnspython is not installed
 
-
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
 DMARCBIS_DIFF_CHEATSHEET = """
 You are an email security, email deliverability, and DNS expert with deep experience in
 DMARC, SPF, DKIM, DNS architecture, and mail flow.

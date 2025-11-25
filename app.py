@@ -117,4 +117,10 @@ with tab2:
         height=150,
     )
 
-    if st.b
+    if st.button("Get answer", key="question_button"):
+        if not user_question.strip():
+            st.error("Please enter a question.")
+        else:
+            answer = answer_freeform_question(user_question)
+            st.subheader("Answer")
+            st.write(answer)
