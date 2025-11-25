@@ -101,11 +101,4 @@ with tab1:
             st.subheader("Recommended starting DMARC record")
             st.code(result["recommended_record"], language="text")
 
-            st.subheader("Implementation details and next steps")
-            for item in result["details"]:
-                st.write(f"- {item}")
-
-# -------------------------------------------------------------------
-# Freeform Q&A tab
-# -------------------------------------------------------------------
-with tab2:
+            st.subheader("Implementation
