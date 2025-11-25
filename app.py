@@ -101,4 +101,20 @@ with tab1:
             st.subheader("Recommended starting DMARC record")
             st.code(result["recommended_record"], language="text")
 
-            st.subheader("Implementation
+            st.subheader("Implementation details and next steps")
+            for item in result["details"]:
+                st.write(f"- {item}")
+
+# -------------------------------------------------------------------
+# Freeform Q&A tab
+# -------------------------------------------------------------------
+with tab2:
+    st.header("Ask a question about email security or DNS")
+
+    user_question = st.text_area(
+        "Ask a DMARC, SPF, DKIM, email deliverability, or DNS question",
+        placeholder="For example: How do I safely move from p=none to p=reject for my main domain?",
+        height=150,
+    )
+
+    if st.b
